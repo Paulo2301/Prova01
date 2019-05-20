@@ -61,11 +61,11 @@ public class Programa {
 		  else if (escolha==3) {
 			Integer ano=0;
 			Integer periodo=0;
-			System.out.println("Digite o ano:");
+			System.out.println("Digite o ano entre 2014 e 2020:");
 			ano =ler.nextInt();
 			System.out.println("Digite o periodo:1 ou 2");
 			periodo=ler.nextInt();
-			if(ano>2013 || ano<2021 && periodo==1|| periodo == 2) {
+			if(ano>2013 && ano<2021 && periodo==1|| periodo == 2) {
 			Semestre semestre = new Semestre(null, ano, periodo);
 			entityManager.getTransaction().begin();
 			entityManager.persist(semestre);
